@@ -55,7 +55,7 @@ void Heap::heapify(){
 }
 
 void Heap::siftdown(int i){
-	if(i < 0 && i > data.size())
+	if((i < 0) ||( i >= data.size()))
 		return;
 	while(!isLeaf(i)){
 		int child = leftChild(i);
