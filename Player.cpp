@@ -1,6 +1,7 @@
 #include "Player.h"
 
-Player::Player(std::string name, int budget){
+Player::Player():hand(){}
+Player::Player(std::string name, int budget):hand(){
 	player_name = name;
 	player_budget = budget;
 }
@@ -21,7 +22,9 @@ bool Player::bet(int amount){
 void Player::collectWinnings(int amount){
 	player_budget += amount;
 }
-/*
-bool Player::operator==(Player obj1, Player obj2){
-	if()
-}*/
+
+bool Player::operator==(Player x){
+	if((this->player_name == x.player_name) && (this->player_budget == x.player_budget))
+		return true;
+	return false;
+}
