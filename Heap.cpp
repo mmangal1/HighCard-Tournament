@@ -1,6 +1,4 @@
 #include "Heap.h"
-#include <string>
-#include <iostream>
 
 //initalize empty array????
 Heap::Heap(){}
